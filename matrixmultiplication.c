@@ -16,13 +16,13 @@ if (c1==r2)
     {
         for(j=0;j<c1;j++)
         {
-            printf("Value of a%d%d\t",i,j);
+            printf("Value of a%d%d\t",i+1,j+1);
             scanf("%d",&a[i][j]);
         }
     }
     for(i=0;i<r2;i++){
         for(j=0;j<c2;j++){
-            printf("Value of b%d%d\t",i,j);
+            printf("Value of b%d%d\t",i+1,j+1);
             scanf("%d",&b[i][j]);
         }
     }
@@ -45,6 +45,12 @@ if (c1==r2)
 }
 else
 printf("can't multiply");
-
+printf("resulting transpose of matrix is\n");
+    for (i = 0; i < r1; i++){
+        for(j=0 ;j<c2 ;j++){
+            printf("%d\t",m[j][i]);
+        }
+        printf("\n");
+    }
 return 0;
 }
