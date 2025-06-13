@@ -8,26 +8,25 @@ struct student
 };
 int main()
 {
-    struct student s1,s2;
-    printf("enter the details of student 1\n");
-    printf("enter the roll no of student\n");
-    scanf("%d",&s1.roll);
-    printf("enter the name of the student\n");
-    scanf("%s",&s1.sname);
-    printf("enter the marks of the student\n");
-    scanf("%f",&s1.marks);
-    printf("roll no. %d\n",s1.roll);
-    printf("student name %s\n",s1.sname);
-    printf("marks %.2f\n",s1.marks);
+    struct student s[2];
+    int i;
+    for ( i = 0; i < 2; i++)
+    {
+    printf("Enter the details of student %d : ",i+1);
+    printf("Enter the roll no of student\n");
+    scanf("%d",&s[i].roll);
+    printf("Enter the name of the student\n");
+    scanf(" %[^\n]",&s[i].sname);
+    printf("Enter the marks of the student\n");
+    scanf("%f",&s[i].marks);
+    }
+    for ( i = 0; i < 2; i++)
+    {
+        printf("Details of student %d : \n",i+1);
+        printf("Roll number : %d\n",s[i].roll);
+        printf("Student name is : %s\n",s[i].sname);
+        printf("Marks : %.2f\n",s[i].marks);
 
-    printf("enter the details of student 2\n");
-    printf("enter the roll no of student\n");
-    scanf("%d",&s2.roll);
-    printf("enter the name of the student\n");
-    scanf("%s",&s2.sname);
-    printf("enter the marks of the student\n");
-    scanf("%f",&s2.marks);
-    printf("roll no. %d\n",s2.roll);
-    printf("student name %s\n",s2.sname);
-    printf("marks %.2f\n",s2.marks);
+    }
 }
+    
